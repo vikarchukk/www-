@@ -1,0 +1,19 @@
+@mixin font($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin flex($j:flex-start, $a:flex-start) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+}
+
+@mixin fontReg($fname, $fstyle, $fweight, $fpath, $format) {
+  @font-face {
+    font-family: $fname; 
+    font-style: $fstyle;
+    font-weight: $fweight; 
+    src: url($fpath) format($format);
+  }
+}

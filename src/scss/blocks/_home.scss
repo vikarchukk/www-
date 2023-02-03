@@ -1,0 +1,131 @@
+.home {
+
+	padding: 100px 0 196px 0;
+
+	position: relative;
+
+	&__img {
+		position: absolute; top: 0; right: 0;
+		z-index: -1;
+		width: 863px;
+
+		@media (max-width: 1100px) { width: 500px; top: 70px; }
+		@media (max-width: $mediaMobil) {
+			display: flex; justify-content: flex-end; 
+			position: relative; right: -25px; top: -10px;
+			width: 100%;
+			img { max-width: 400px;  }
+		}
+	}
+
+	&__wrap {  }
+
+	&__title {
+		margin-bottom: 15px;
+
+		max-width: 380px;
+
+		h1 { @include font(48px, 62px); }
+	}
+
+	&__textOne {
+		margin-bottom: 62px;
+
+		p { @include font(14px, 24px); }
+	}
+
+	&__btn-row { margin-bottom: 130px; display: flex; grid-column-gap: 19px; }
+
+	&__btnOne, &__btnTwo { width: 144px; height: 40px; }
+
+	&__btnOne { @include flex(center, center); grid-column-gap: 10px; }
+
+	&__btnTwo { 
+		font-weight: 400; @include font(14px, 14px);
+		color: $cl-blue-dark; letter-spacing: 1px; 
+
+		border: 1px solid transparent;
+		border-radius: 4px;
+		box-sizing: none;
+
+		transition: border-color $animation;
+	} 
+
+	&__btnTwo:hover { border-color: $cl-blue-dark; }
+
+	&__textTwo {
+		margin-bottom: 25px;
+
+		p { text-transform: uppercase; @include font(14px, 24px); }
+	}
+
+	&__list {
+		display: flex; grid-column-gap: 83px;
+
+		ul { display: flex; flex-direction: column; grid-row-gap: 12px; }
+
+		@media (max-width: 360px) {
+			grid-column-gap: 15px;
+		}
+	}
+
+	&__number {
+		font-weight: 400; @include font(36px, 36px);
+		color: $cl-black;
+	}
+
+	&__list-text {
+		font-weight: 400; @include font(14px, 14px); 
+		color: $cl-gray-5e;
+		text-transform: uppercase;
+	}
+}
+
+@media (max-width: $mediaMobil) {
+
+	.home {
+
+		padding: 30px 0 40px 0;
+
+		&__wrap { 
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__title {
+			margin-bottom: 10px;
+
+			max-width: 100%;
+
+			h1 { @include font(38px, 52px); }
+		}
+
+		&__textOne {
+			margin-bottom: 20px;
+
+			p { @include font(11px, 21px); }
+		}
+
+		&__btn-row { margin-bottom: 20px; }
+
+		&__textTwo {
+			margin-bottom: 15px;
+
+			p { @include font(11px, 21px); }
+		}
+
+		&__list {
+			grid-column-gap: 30px;
+
+			ul { grid-row-gap: 12px; }
+		}
+
+		&__number {
+			@include font(24px, 24px);
+		}
+
+		&__list-text {
+			@include font(7px, 8px); 
+		}
+	}
+}

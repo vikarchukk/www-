@@ -1,0 +1,25 @@
+body {
+	color: $cl-black; background-color: $cl-white;
+	font-family: $font-family-main;
+	overflow-x: hidden;
+	&.lock {overflow: hidden}
+}
+
+.box {
+	max-width: 1140px; width: 100%;
+	padding: 0 30px; margin: 0 auto;
+	@media (max-width: $mediaMobil) { padding: 0 25px; }
+}
+
+.title { color: $cl-black; font-weight: 700; }
+
+.text { color: $cl-gray-99; font-weight: 400; }
+
+.btn { 
+	background: $cl-blue-dark; color: $cl-white; 
+	border-radius: 4px; 
+	transition: background $animation;
+	font-weight: 400; @include font(14px, 14px);
+	letter-spacing: 1px;
+}
+.btn:hover { background: $cl-blue-dark-hover; }

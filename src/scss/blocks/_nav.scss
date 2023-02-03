@@ -1,0 +1,95 @@
+.nav {
+
+	&__icon { display: none } 
+
+	&__list { 
+		list-style-type: none; 
+		@include flex(flex-start, center); gap: 50px; 
+	}
+
+	&__link {
+		@include flex(flex-start, center);
+		grid-column-gap: 8px;
+
+		color: $cl-gray-5e;
+		font-weight: 600; @include font(14px, 14px);
+		transition: color $animation;
+
+		i { font-size: 19px; }
+	}
+
+	&__link:hover { color: $cl-blue-dark; }
+
+	&__btn { width: 110px; height: 40px; }
+
+	@media (max-width: 777px) {
+
+		&__body {
+			height: 100vh; width: 100%;
+
+			position: absolute; top: 0; left: -100%;
+
+			display: flex; overflow: auto;
+			background-color: $cl-blue-dark; transition: all .3s;
+			z-index: 990;
+		}
+
+		&__body.active {left: 0;}
+
+		&__list { 
+			flex-direction: column; gap: 0; 
+			margin: auto; padding: 30px; 
+		}
+
+		&__link { 
+			display: block; 
+			color: $cl-white; @include font(30px, 100px); 
+			i {font-size: 30px;}
+		}
+
+		&__btn {
+			color: $cl-white; font-weight: 600; @include font(30px, 100px);
+			letter-spacing: 0;
+			transition: color $animation;
+			width: 100%;
+			height: 100%;
+		}
+
+		&__link:hover, &__btn:hover { color: $cl-gray-d6; background: 0;}
+	}
+
+}
+
+@media (max-width: 777px) { 
+
+	.nav {
+		&__icon {
+			width: 30px; height: 18px;
+
+			display: block;
+			z-index: 5; cursor: pointer;
+			position: relative;
+			z-index: 991;
+		}
+
+		&__icon span {
+			width: 100%; height: 4px;
+
+			position: absolute; top: calc(50% - 2px); left: 0;
+			background: $cl-blue-dark; transition: all .3s;
+		}
+
+		&__icon.active span { background: $cl-white }
+
+		&__icon span:first-child {top: 0}
+		&__icon span:last-child {top: auto; bottom: 0}
+		&__icon.active span { transform: scale(0); }
+
+		&__icon.active span:first-child {
+			transform: rotate(-45deg); top: calc(50% - 2px); 
+		}
+		&__icon.active span:last-child {
+			transform: rotate(45deg); bottom: calc(50% - 2px); 
+		}
+	}
+}

@@ -1,0 +1,78 @@
+.special {
+
+	&__wrap {
+		display: flex; flex-wrap: wrap;
+		grid-column-gap: 20px; grid-row-gap: 50px;
+		justify-content: center;
+
+		@media (max-width: 1140px) { grid-row-gap: 30px; }
+		@media (max-width: $mediaMobil) { grid-row-gap: 20px; }
+	}
+
+	&__item { 
+		height: 352px; 
+		flex: 0 1 346px;
+
+		@media (max-width: 1140px) { flex: 0 1 48%; }
+		@media (max-width: $mediaMobil) { 
+			flex: 0 1 100%; 
+			height: auto; 
+			padding: 10px 0;
+		}
+	}
+
+	&__item-title {
+  
+		h1 {
+			margin-top: 99px;
+			margin-bottom: 15px;
+			@include font(36px, 44px);
+
+			@media (max-width: $mediaMobil) { margin-top: 15px; }
+		}
+
+		p { 
+			max-width: 286px; 
+			@include font(14px, 24px); 
+		}
+	}
+
+	&__item-card {
+
+		padding: 60px 40px 93px 40px;
+
+		border: 1px solid; border-color: #EFEFF4; border-radius: 8px;
+		background: #ffffff;
+		transition: background $animation, border-color $animation;
+
+		h1 { 
+			margin-bottom: 16px;
+			font-weight: 800; @include font(18px, 18px);
+			@media (max-width: $mediaMobil) { margin-bottom: 10px; }
+		}
+
+		p { @include font(14px, 24px); }
+
+		@media (max-width: 1140px) { padding: 25px; }
+		@media (max-width: $mediaMobil) { padding: 15px; }
+	}
+
+	&__icon {
+		margin-bottom: 39px;
+
+		width: 77px; height: 77px;
+		@include flex(center, center);
+
+		background: #FAFBFD; border-radius: 100%;
+		transition: background $animation, box-shadow $animation;
+
+		@media (max-width: $mediaMobil) { margin-bottom: 19px; }
+	}
+
+	&__item-card:hover { background: #FAFBFD; border-color: transparent; }
+
+	&__item-card:hover &__icon { 
+		background: #ffffff;
+		box-shadow: 0px 6px 15px rgba(35, 36, 39, 0.05);
+	}
+}

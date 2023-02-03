@@ -1,0 +1,20 @@
+// more
+@import './more/_reset.scss';
+
+// setting
+@import './setting/_mixin.scss';
+@import './setting/_vars.scss';
+@import './setting/_colors.scss';
+@import './setting/_fonts.scss';
+@import './setting/_default.scss';
+
+// bloks
+@import './blocks/_header.scss';
+@import './blocks/_nav.scss';
+@import './blocks/_home.scss';
+@import './blocks/_special.scss';
+@import './blocks/_trust.scss';
+@import './blocks/_backed.scss';
+@import './blocks/_footer.scss';
+
+@import './more/_aos.scss';

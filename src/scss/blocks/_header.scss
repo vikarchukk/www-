@@ -1,0 +1,11 @@
+.header {
+
+	padding: 16px 0;
+
+	&__wrap { @include flex(space-between, center); }
+
+	&__logo { color: $cl-black-00; font-weight: 800; @include font(18px, 18px) }
+
+	@media (max-width: 777px) { padding: 28px 0 16px 0 }
+
+}

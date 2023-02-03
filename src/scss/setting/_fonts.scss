@@ -1,0 +1,12 @@
+$font-family-main: 'Metropolis', sans-serif;
+
+@include fontReg('Metropolis', normal, 400, 
+	'../fonts/Metropolis-Regular.otf', 'opentype');
+@include fontReg('Metropolis', normal, 500, 
+	'../fonts/Metropolis-Medium.otf', 'opentype');
+@include fontReg('Metropolis', normal, 600, 
+	'../fonts/Metropolis-SemiBold.otf', 'opentype');
+@include fontReg('Metropolis', normal, 700, 
+	'../fonts/Metropolis-Bold.otf', 'opentype');
+@include fontReg('Metropolis', normal, 800, 
+	'../fonts/Metropolis-ExtraBold.otf', 'opentype');
