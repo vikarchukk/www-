@@ -1,1 +1,1 @@
-1 - https://vikarchukk.github.io/www-/01/public/
+https://vikarchukk.github.io/www-/01/public/
