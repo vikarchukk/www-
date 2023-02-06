@@ -1,0 +1,91 @@
+.buy {
+
+	padding-bottom: 80px;
+
+	@media (max-width: 1100px) { padding-bottom: 50px; }
+
+	&__wrap { 
+		display: flex; justify-content: space-between; 
+
+		@media (max-width: 1100px) {
+			flex-direction: column; align-items: center; gap: 50px;
+		}
+	}
+
+	&__img { padding-top: 50px; @media (max-width: 1100px) { padding-top: 0; } }
+
+	&__content {
+
+		max-width: 542px;
+
+		@media (max-width: 1100px) { max-width: 100%; text-align: center; } 
+
+		h1 { margin: 0; span { color: $eucalyptus; } }
+
+		h5 {color: $celestial-blue; font-weight: 700; @include font(26px, 31px);}
+
+		h3 {
+			display: none; @media (min-width: 500px) { display: block; }
+
+			margin-bottom: 8px;
+
+			color: $cl-white; font-weight: 700; @include font(40px, 50px);
+            text-transform: capitalize;
+
+            span { position: relative; }
+
+            span::after {
+				content: '';
+				position: absolute; left: 7px; bottom: 2.25px;
+				width: 151px; height: 39px;
+				background: url('../img/buy-arrow.svg') no-repeat center center;
+			}
+		}
+
+		button {
+			margin-bottom: 40px;
+
+			width: 136px; height: 68px;
+
+			border: 1px solid $eucalyptus; border-radius: 16px;
+			color: $cl-white; font-weight: 700; @include font(25px, 32px);
+            text-transform: capitalize;
+            transition: color $animation;
+
+            position: relative;
+
+            @media (max-width: 500px) { margin-top: 20px; }
+		}
+
+		button::after {
+			content: '';
+			position: absolute; bottom: -5px; left: -5px;
+			width: 100%;height: 100%;
+			border: 1px solid $eucalyptus; border-radius: 16px;
+		}
+	}
+
+	&__list {
+
+		max-width: 521px; width: 100%; padding: 20px 0;
+
+		background: $police-blue; border-radius: 18px;
+
+		@include flex(center, center);
+		grid-column-gap: 44px; text-align: center;
+
+		@media (max-width: 1100px) { 
+			margin: 0 auto; flex-wrap: wrap; grid-row-gap: 20px;
+		}
+
+		ul {
+
+			display: flex; flex-direction: column; grid-row-gap: 18px;
+
+			li {
+				color: $cl-white; font-weight: 700; @include font(30px, 38px);
+				text-transform: capitalize;
+			}
+		}
+	}
+}

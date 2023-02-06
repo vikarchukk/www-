@@ -1,0 +1,68 @@
+.footer {
+
+	padding-bottom: 100px;
+
+	@media (max-width: 1117px) { padding-bottom: 50px; }
+
+	&__wrap {
+		display: flex; justify-content: space-between;
+		@media (max-width: 1117px) {justify-content: center;}
+	}
+
+	&__content { @media (max-width: 1117px) {display: none;} }
+
+	&__content-list { 
+		display: flex; grid-column-gap: 110px; 
+
+		ul {
+			display: flex; flex-direction: column; grid-row-gap: 22px; 
+		}
+	}
+
+	a {
+		color: $cl-white; font-weight: 400; @include font(20px, 25px); 
+		text-transform: capitalize;
+		transition: color $animation;
+	}
+
+	a:hover { color: $cl-white-hover; }
+
+	&__title {
+		color: $cl-white; font-weight: 700; @include font(25px, 32px); 
+		text-transform: capitalize;
+	}
+
+	&__email {
+
+		@media (max-width: 1117px) {display: none;}
+
+		h1 { margin-bottom: 22px; }
+
+		input {
+			background: #3B7C70; border-radius: 50px; height: 60px;
+			color: $cl-white; font-weight: 400; @include font(20px, 25px); 
+
+			padding-left: 20px; padding-right: 110px;
+		}
+
+		form {position: relative;}
+
+		button { 
+			width: 100px; height: 58px;
+
+			position: absolute; right: 1px;
+			top: 50%; transform: translateY(-50%);
+
+			background: #262E48; border-radius: 50px;
+			color: $cl-white; font-weight: 400; @include font(20px, 25px);
+			text-transform: capitalize; 
+		}
+
+		input::placeholder {color: rgb(255, 255, 255, 0.8);}
+	}
+
+	&__title-mobil {
+		display: none;
+		@media (max-width: 1117px) {display: block;}
+	}
+}

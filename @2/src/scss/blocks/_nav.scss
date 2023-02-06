@@ -1,0 +1,98 @@
+.nav-main {
+
+	margin: 40px 0 20px 0;
+
+	&__wrap { @include flex(space-between, center); }
+
+	&__logo { 
+		color: $cl-white; font-weight: 700; @include font(27px, 34px); 
+		transition: color $animation;
+	}
+
+	&__logo:hover { color: $cl-white-hover; }
+
+	&__nav { }
+
+}
+
+.nav {
+
+	&__icon { display: none; } 
+
+	&__list { 
+		list-style-type: none; 
+		@include flex(flex-start, center); grid-column-gap: 50px; 
+	}
+
+	&__link {
+		color: $cl-white;
+		font-weight: 400; @include font(20px, 25px);
+		transition: color $animation;
+	}
+
+	&__link:hover { color: $cl-white-hover; }
+
+	@media (max-width: 777px) {
+
+		&__body {
+			height: 100vh; width: 100%;
+
+			position: absolute; top: 0; left: -100%;
+
+			display: flex; overflow: auto;
+			background-color: $rich-black; transition: all .3s;
+			z-index: 990;
+		}
+
+		&__body.active {left: 0;}
+
+		&__list { 
+			flex-direction: column; gap: 0; 
+			margin: auto; padding: 30px; 
+		}
+
+		&__link { @include font(30px, 100px); }
+	}
+
+}
+
+@media (max-width: 777px) { 
+
+	.nav {
+		&__icon {
+			width: 30px; height: 18px;
+
+			display: block;
+			cursor: pointer;
+			position: relative;
+			z-index: 991;
+		}
+
+		&__icon span {
+			width: 100%; height: 3px;
+
+			position: absolute; top: calc(50% - 1.5px); left: 0;
+			background: $cl-white; transition: all .3s;
+		}
+
+		&__icon.active span { background: $cl-white }
+
+		&__icon span:first-child {top: 0}
+		&__icon span:last-child {top: auto; bottom: 0}
+		&__icon.active span { transform: scale(0); }
+
+		&__icon.active span:first-child {
+			transform: rotate(-45deg); top: calc(50% - 1.5px); 
+		}
+		&__icon.active span:last-child {
+			transform: rotate(45deg); bottom: calc(50% - 1.5px); 
+		}
+	}
+}
+
+.ellipse-1 {
+	position: absolute; top: -320px; left: -200px;
+	max-width: 590px; width: 100%; height: 594px;
+	background: rgba(84, 197, 173, 0.95); filter: blur(217px);
+	z-index: -2;
+}

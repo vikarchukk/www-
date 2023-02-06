@@ -1,0 +1,43 @@
+.featured {
+
+	padding-bottom: 190px;
+
+	@media (max-width: $mediaMobil) { padding-bottom: 100px; }
+
+	&__wrap { }
+
+	&__title {
+		margin-bottom: 10px;
+
+		h1 {
+			color: $cl-white; font-weight: 700; @include font(30px, 38px); 
+			text-transform: uppercase;
+		}
+	}
+
+	&__content {
+		padding: 30px 50px;
+		background: $yankees-blue-2; border: 1px solid $medium-turquoise-1;
+		position: relative;
+	}
+
+	&__content::after {
+		content: '';
+		position: absolute; bottom: -6px; left: -6px;
+		width: 100%; height: 100%;
+		border: 1px solid $medium-turquoise-1;
+		z-index: -1;
+	}
+
+	&__list {
+		display: flex; justify-content: space-between; 
+		flex-wrap: wrap; gap: 30px;
+		padding: 0;
+
+		li {
+			color: rgb(255, 255, 255, 0.5); 
+			font-weight: 700; @include font(27px, 34px); 
+			text-transform: capitalize;
+		}
+	}
+}

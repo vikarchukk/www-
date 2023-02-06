@@ -1,0 +1,40 @@
+.part {
+
+	padding-bottom: 150px;
+
+	@media (max-width: $mediaMobil) { padding-bottom: 80px; }
+
+	&__wrap {}
+
+	&__item {
+		background: linear-gradient(96.97deg, #1F143B -19.45%, #3C8273 103.56%);
+		border-radius: 20px; padding: 100px 0 80px 0;
+		text-align: center;
+
+		@media (max-width: $mediaMobil) {
+			padding: 70px 10px 50px 10px; 
+		}
+
+		h1 {
+			margin-bottom: 40px;
+
+			color: $cl-white; text-transform: capitalize;
+			font-weight: 700; @include font(60px, 60px);
+
+			@media (max-width: $mediaMobil) { 
+				margin-bottom: 60px;
+				@include font(40px, 50px); 
+			} 
+		}
+
+		button {
+			color: $cl-white; text-transform: uppercase;
+			font-weight: 700; @include font(40px, 60px); 
+
+			padding: 13px 75px;
+			background: #000000; border-radius: 50px;
+
+			@media (max-width: $mediaMobil) { @include font(20px, 20px); }
+		}
+	}
+}

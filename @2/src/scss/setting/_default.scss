@@ -1,0 +1,21 @@
+body {
+	color: $cl-white; 
+	background-color: $rich-black;
+	font-family: $font-family-main;
+	&.lock {overflow: hidden}
+	padding: 0 20px;
+}
+
+.box {
+	max-width: 1129px;
+	width: 100%; 
+	margin: 0 auto;
+}
+
+.title {
+	color: $cl-white; font-weight: 700; @include font(60px, 76px); 
+	@media (max-width: $mediaMobil) {
+		@include font(35px, 51px);
+	}
+}
+

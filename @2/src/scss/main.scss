@@ -1,0 +1,18 @@
+@import './more/_reset.scss';
+
+// setting
+@import './setting/_colors.scss';
+@import './setting/_mixin.scss';
+@import './setting/_vars.scss';
+@import './setting/_fonts.scss';
+@import './setting/_default.scss';
+
+// bloks
+@import './blocks/_nav.scss';
+@import './blocks/_header.scss';
+@import './blocks/_featured.scss';
+@import './blocks/_buy.scss';
+@import './blocks/_carry.scss';
+@import './blocks/_client.scss';
+@import './blocks/_part.scss';
+@import './blocks/_footer.scss';

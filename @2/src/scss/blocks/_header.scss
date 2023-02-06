@@ -1,0 +1,64 @@
+.header {
+
+	padding: 150px 0 190px 0;
+
+	@media (max-width: 1200px) { padding: 50px 0 170px 0; }
+
+	@media (max-width: $mediaMobil) { padding: 40px 0 50px 0; }
+
+	&__wrap { 
+		display: flex; 
+		@media (max-width: 1200px) {flex-direction: column; align-items: center;}
+	}
+
+	&__content {
+		padding: 55px 0 0 0;
+		@media (max-width: $mediaMobil) { padding: 10px 0 0 0; }
+	}
+
+	&__title {
+		margin-bottom: 30px;
+
+		h1{ 
+			max-width: 530px; text-transform: capitalize; 
+			@media (max-width: 1200px) { max-width: 100%; text-align: center; }
+		}
+	}
+
+	&__btns {
+		display: flex; grid-column-gap: 22px;
+
+		a {
+			width: 256px; height: 95px;
+			border-radius: 50px;
+			color: $cl-white; @include font(27px, 27px); font-weight: 700;
+			@include flex(center, center);
+			text-transform: uppercase;
+			transition: color $animation;
+
+			@media (max-width: $mediaMobil) {
+				width: 192px; height: 72px;
+				@include font(17px, 17px);
+			}
+		}
+
+		@media (max-width: 1200px) { justify-content: center; }
+
+		@media (max-width: $mediaMobil) {
+			flex-direction: column; grid-row-gap: 22px; align-items: center;
+		}
+	}
+
+	&__btn-sell{ background: $yankees-blue-2; }
+
+	&__btn-buy{ border: 3px solid $yankees-blue-2; }
+
+	&__img {  }
+}
+
+.ellipse-2 {
+	position: absolute; right: 0px; top: 500px;
+	max-width: 590px; width: 100%; height: 594px;
+	background: #52A7C6; filter: blur(217px);
+	z-index: -1;
+}
