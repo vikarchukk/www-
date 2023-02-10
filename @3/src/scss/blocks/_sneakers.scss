@@ -1,0 +1,157 @@
+.sneakers {
+
+	padding: 80px 0 30px 0;
+
+	@media (max-width: 705px) { padding: 30px 0 20px 0; }
+
+	&__wrap {}
+
+	&__title {
+		margin-bottom: 100px;
+
+		text-align: center; 
+		color: $cl-black; font-weight: 400; @include font(40px, 49px);
+		@media (max-width: 705px) { 
+			margin-bottom: 47px; @include font(16px, 20px); 
+		}
+
+		h5 { 
+			margin-bottom: 10px; 
+			@media (max-width: 705px) { margin-bottom: 5px; } 
+		}
+
+		h1 {
+			margin-bottom: 30px;
+			@include font(80px, 98px); font-style: italic; font-weight: 900;
+			@media (max-width: 705px) { 
+				margin-bottom: 10px; @include font(24px, 29px); 
+			}
+		}
+	}
+
+	&__slider-nav {
+
+		display: flex; justify-content: space-between;
+
+		h1 { 
+			color: $cl-black; font-weight: 700; @include font(40px, 49px); 
+			@media (max-width: 705px) { @include font(16px, 20px); }
+		}
+
+		div { display: flex; align-items: flex-end; }
+
+		button {
+			width: 55px; height: 55px; border-radius: 50%;
+			transition: opacity $animation;
+			@include flex(center, center);
+			position: static;
+
+			img { width: 22px; @media (max-width: 705px) { width: 12px; } }
+
+			@media (max-width: 705px) { width: 25px; height: 25px; }
+		}
+
+		button:hover {opacity: 0.7;}
+	}
+
+	&__slider-btn-left { background: #F5F5F5; }
+
+	&__slider-btn-right { 
+		background: #C6C6C6; margin-left: 21px; 
+		img {transform: rotate(180deg);} 
+		@media (max-width: 705px) { margin-left: 10px; }
+	}
+}
+
+.sneakers-slider { 
+
+	padding-bottom: 100px; 
+
+	@media (max-width: 705px) { padding-bottom: 50px; }
+
+	&__card {
+		width: 400px !important; height: 580px !important;
+		transition: transform 0.5s;
+
+		background: $cl-white-ef; border-radius: 18px;
+		font-family: 'Work Sans'; color: $cl-black;
+
+		@media (max-width: 705px) {
+			width: 170px !important; height: 238px !important;
+			margin: 35px 0;
+		}
+
+		h1, p { 
+			margin: 0 0 63px 38px; z-index: 3; 
+			@media (max-width: 705px) { margin: 0 0 44px 22px; }
+		}
+
+		h1 { 
+			margin-bottom: 29px; font-weight: 700; @include font(40px, 47px);
+			@media (max-width: 705px) { 
+				margin-bottom: 12px; @include font(16px, 19px); 
+			}
+		}
+
+		p { 
+			font-weight: 400; @include font(20px, 23px); 
+			@media (max-width: 705px) { @include font(12px, 14px); }
+		}
+
+		position: relative;
+
+		a {
+			position: absolute; right: 35px; bottom: 25px;
+			width: 55px; height: 55px; @include flex(center, center); 
+			background: $cl-white; border-radius: 35px;
+			transition: opacity $animation;
+			img { @media (max-width: 705px) { width: 10px; } } 
+			@media (max-width: 705px) {
+				width: 25px; height: 25px; right: 16px; bottom: 16px;
+			}
+		}
+
+		a:hover {opacity: 0.7;}
+	}
+
+	&__card::after {
+		content: 'NIKE';
+		position: absolute; top: 180px; left: 0;
+		font-family: 'Poppins'; font-weight: 900; font-style: italic;
+		color: rgba(0, 0, 0, 0.1);  @include font(160px, 240px);
+		z-index: 1; transform: rotate(90deg);
+		@media (max-width: 705px) { 
+			@include font(70px, 105px); top: 80px;
+		}
+	}
+
+	&__card-img {
+		height: 420px; @include flex(center, center);
+		@media (max-width: 705px) { height: 170px; }
+		transition: height 0.5s;
+		img {
+			object-fit: contain; z-index: 3;
+			@media (max-width: 705px) {width: 200px;}
+		}
+	}
+}
+
+.swiper-slide-active.sneakers-slider__card {
+	@media (max-width: 705px) { 
+		transform: scale(1.3) !important;
+	}
+}
+
+.card-react {
+	img {
+		position: relative; bottom: -23px;
+		@media (max-width: 705px) { bottom: -15px; }
+	}
+}
+
+.slider-container {
+	max-width: 1381px; width: 100%; padding: 0 40px; margin: 0 auto;
+	@media (max-width: 1381px) { padding: 0; }
+}
+
+.swiper-button-prev::after, .swiper-button-next::after { display: none; }

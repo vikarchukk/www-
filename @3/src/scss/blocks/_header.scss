@@ -1,0 +1,175 @@
+.header {
+
+	@media (min-width: 695px) {
+		background-image: url('../img/header/bg-desktop.svg'); 
+		background-size: cover;
+	}
+
+	&__wrap { }
+
+	&__mobil {
+		@media (max-width: 695px) {
+			display: block;
+			max-width: 100%; height: 165px; 
+			background-image: url('../img/header/one-mobil.svg'); 
+			background-size: cover;
+		}
+	}
+
+	&__mobil-bg {
+		@media (max-width: 695px) {
+			background-image: url('../img/header/two-mobil.png'); 
+			background-size: cover;
+		}
+	}
+
+	&__desktop {
+		padding: 50px 0 20px 0;
+
+		display: flex; flex-direction: column; grid-row-gap: 30px;
+
+		@media (max-width: 695px) { padding: 16px 0; grid-row-gap: 12px; }
+
+		h1 {
+			color: $cl-white; @include font(40px, 49px); 
+			font-weight: 900; font-style: italic;
+			@media (max-width: 695px) { @include font(16px, 20px); }
+		}
+
+		p { 
+			max-width: 559px;
+			color: $cl-white; @include font(20px, 24px); font-weight: 900; 
+			@media (max-width: 695px) { 
+				max-width: 289px; @include font(12px, 15px); 
+			}
+		}
+
+		a {
+			color: $cl-black; @include font(16px, 20px); font-weight: 600; 
+			width: 200px; height: 40px; @include flex(center, center);
+			background: $cl-white; border-radius: 16px;
+			transition: opacity $animation;
+			@media (max-width: 695px) { 
+				width: 115px; height: 30px; @include font(10px, 12px); 
+			}
+		}
+
+		a:hover {opacity: 0.7;}
+	}
+}
+
+.ticker {
+	position: relative; overflow: hidden;
+
+	border-top: 1px solid $cl-black;
+	border-bottom: 1px solid $cl-black;
+
+	&__wrapper { display: flex; }
+
+	&__item {
+		padding: 0 10px;
+
+		white-space: nowrap;  flex-shrink: 0; 
+		animation: ticker 5s linear infinite;
+
+		display: flex; align-items: center; grid-column-gap: 10px;
+
+		img { height: 65px; @media (max-width: 695px) { height: 35px; } }
+
+		h1 { 
+			color: $cl-black; font-weight: 900; @include font(35px, 44px); 
+			@media (max-width: 695px) { @include font(15px, 24px);  }
+		}
+	}
+}
+
+@keyframes ticker {
+	0% { transform: translateZ(0); }
+	100% { transform: translate3d(-100%, 0, 0); }
+}
+
+.two-people {
+	width: 100%; max-height: 700px;
+	display: flex; justify-content: center; position: relative;
+
+	> img {width: 100%; object-fit: cover;}
+
+	&__nike-icon {
+		position: absolute; 
+		top: 50%; left: 50%; transform: translate(-50%, -50%);
+		width: 380px; height: 131.29px;
+
+		@media (max-width: 695px) { width: 99.11px; height: 35.17px; }
+	}
+}
+
+.header-card {
+
+	&__wrap {
+		display: flex; justify-content: space-between;
+
+		@media (max-width: 1329px) {
+			flex-direction: column; align-items: center;
+			grid-row-gap: 50px;
+		}
+	}
+
+	&__item {
+		width: 602px;  height: 272px; padding: 60px 0 24px 66px;
+
+		background: $cl-white-ef; border-radius: 18px;
+		box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+
+		@media (max-width: 700px) {
+			width: 302px;  height: 137px; padding: 30px 0 15px 32px;
+		}
+
+		h1 {
+			margin-bottom: 10px;
+			color: $cl-red-dark; @include font(48px, 59px); 
+			font-style: italic; font-weight: 700;
+			@media (max-width: 700px) {
+				margin-bottom: 3px; @include font(16px, 20px);
+			}
+		}
+
+		h3 {
+			margin-bottom: 15px; max-width: 229px;
+			color: $cl-black; font-weight: 400; @include font(20px, 24px); 
+			letter-spacing: 0.01em;
+			@media (max-width: 700px) {
+				margin-bottom: 13px; max-width: 128px; @include font(12px, 15px);
+			}
+		}
+
+		a {
+			margin-left: 34px;
+			width: 55px; height: 55px; @include flex(center, center); 
+			background: $cl-white; border-radius: 35px;
+			transition: opacity $animation;
+			img {
+				@media (max-width: 700px) { width: 10px; }
+			}
+			@media (max-width: 700px) {
+				margin-left: 18px;
+				width: 25px; height: 25px;
+			}
+		}
+
+		a:hover {opacity: 0.7;}
+
+		position: relative; top: -35px;
+		@media (max-width: 700px) { top: -18px; }
+
+		> img { position: absolute; }
+	}
+
+	&__wrap &__item:nth-child(1) > img { 
+		top: -100px; right: -110px; 
+		@media (max-width: 700px) {width: 270px; top: -53px; right: -50px; }
+	}
+	&__wrap &__item:nth-child(2) > img { 
+		top: -85px; right: -80px; 
+		@media (max-width: 700px) {width: 270px; top: -65px; right: -47px; }
+	}
+}

@@ -1,0 +1,17 @@
+body {
+	color: $cl-black; background-color: $cl-white;
+	font-family: $font-family-main;
+	overflow-x: hidden; min-width: 300px;
+	&.lock {overflow: hidden}
+}
+
+.box {
+	max-width: 1381px;
+	width: 100%;
+	padding: 0 40px;
+	margin: 0 auto;
+
+	@media (max-width: $mediaMoibil) {
+		padding: 0 20px;
+	}
+}

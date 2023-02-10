@@ -1,0 +1,42 @@
+$mediaMoibil: 660px;
+// --------- color ---------
+$cl-white: #ffffff;
+$cl-black: #000000;
+
+$cl-black-hover: rgb(0, 0, 0, 0.5);
+$cl-white-hover: rgb(255, 255, 255, 0.5);
+
+$cl-gray-a0: #A0A0A0;
+$cl-gray-9f: #9F9F9F;
+$cl-white-ef: #EFEFEF;
+
+$cl-red-dark: #FF3939;
+// --------- /color ---------
+
+// --------- /font ---------
+$font-family-main: 'Montserrat', sans-serif; 
+// 400, 600, 700, 700 Italic, 900, 900 Italic
+
+$font-family-workSans: 'Work Sans', sans-serif; // 400, 700
+
+$font-family-poppins: 'Poppins', sans-serif; // 900 Italic
+// --------- /font ---------
+
+// --------- animation ---------
+$animation-speed: .4s;
+$animation-func: ease;
+$animation: $animation-speed $animation-func;
+// --------- /animation ---------
+
+// --------- mixin ---------
+@mixin font($size, $line-height) {
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin flex($j:flex-start, $a:flex-start) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+}
+// --------- /mixin ---------
