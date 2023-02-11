@@ -75,13 +75,7 @@
 			width: 100%; height: 2px;
 
 			position: absolute; top: calc(50% - 1.5px); left: 0;
-			background: $cl-white; 
-			transition: top .01s; 
-			transition: bottom .01s; 
-
-			transition-property: transform;
-  			transition-duration: 0.5s;
-  			transition-delay: 0.1s;
+			background: $cl-white; transition: all .5s;
 		}
 
 		&__icon.active span { background: $cl-white }
